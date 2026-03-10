@@ -6,7 +6,7 @@ const app =express();
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://jobready-opal.vercel.app",
+    origin:"https://jobready-opal.vercel.app",
     credentials:true
 }))
 const authRouter =require("./routes/auth.routes");
