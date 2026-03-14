@@ -11,6 +11,11 @@ app.use(cors({
 }))
 const authRouter =require("./routes/auth.routes");
 const interviewRouter =require("./routes/Interview.routes")
+app.get("/health",(req,res)=>{
+    res.status(200).json({
+        status:"Backend running 🚀"
+    });
+});
 app.use("/api/auth",authRouter);
 app.use("/api/interview",interviewRouter);
 module.exports =app;
